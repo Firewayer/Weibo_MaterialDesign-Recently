@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
+        <!-- 用户名称、新浪认证部分 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/img_wb_item_head_layout"
+                android:layout_width="42dp"
+                android:layout_height="42dp">
+
+
+                <ImageButton
+                    android:id="@+id/id_btn_userhead"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:clickable="true"
+                    android:visibility="gone"/>
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_wb_item_head"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="16dp"/>
+
+
+                <!-- 微博用户按钮 -->
+
+            </FrameLayout>
+
+            <!-- 用户名称 -->
+
+            <TextView
+                android:id="@+id/txt_wb_item_uname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/img_wb_item_head_layout"
+                android:text="我是小野猪"
+                android:textColor="#000000"
+                android:textSize="15dp"/>
+            <!-- 新浪V认证 -->
+
+            <ImageView
+                android:id="@+id/img_wb_item_V"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@id/txt_wb_item_uname"
+                android:background="#ffffff"
+                android:src="@drawable/v"
+                android:visibility="visible"/>
+            <!-- 微博时间 -->
+
+            <TextView
+                android:id="@+id/txt_wb_item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_wb_item_uname"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/img_wb_item_head_layout"
+                android:text="1小时前"
+                android:textColor="#efa608"
+                android:textSize="12sp"/>
+            <!-- 微博来源 -->
+
+            <TextView
+                android:id="@+id/txt_wb_item_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_wb_item_uname"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/txt_wb_item_time"
+                android:text="Touch Android"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <!-- 微博正文内容 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <!-- 微博正文内容 -->
+
+            <TextView
+                android:id="@+id/txt_wb_item_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="14年前的今天北京申奥成功！那是你多大？"
+                android:textColor="#FF333333"
+                android:textSize="16sp"/>
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageButton
+                    android:id="@+id/id_btn_statusImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:clickable="true"/>
+
+
+             <!--   <ImageView
+                    android:id="@+id/img_wb_item_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"/>-->
+                <com.jaeger.ninegridimageview.NineGridImageView
+                    android:id="@+id/img_wb_item_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_width="match_parent"
+                    app:imgGap="4dp"
+                    app:showStyle="fill"
+                    app:singleImgSize="120dp"/>
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- 转发的子微博内容 -->
+
+        <LinearLayout
+            android:id="@+id/lyt_wb_item_sublayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:background="#0099ff"/>
+
+            <!-- 微博子内容 -->
+
+            <TextView
+                android:id="@+id/txt_wb_item_subcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="据说99%的人坐不了这个动作~~你行吗？"
+                android:textColor="#FF626262"
+
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:clickable="true"
+                android:id="@+id/img_wb_item_content_subpic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/ic_icon"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <!-- 微博转发数 -->
+
+                <ImageButton
+                    android:id="@+id/txt_wb_item_redirect_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="#00000000"
+                    android:clickable="false"
+                    android:src="@drawable/zhuanfa"/>
+
+                <TextView
+                    android:id="@+id/txt_wb_item_redirect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@id/txt_wb_item_redirect_img"
+                    android:text="10"
+                    android:textColor="#9ba0aa"
+                    android:textSize="10dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <!-- 微博评论数 -->
+
+                <ImageButton
+                    android:id="@+id/txt_wb_item_comment_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="#00000000"
+                    android:clickable="true"
+                    android:src="@drawable/pinglun"/>
+
+                <TextView
+                    android:id="@+id/txt_wb_item_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@id/txt_wb_item_comment_img"
+                    android:text="100"
+                    android:textColor="#9ba0aa"
+                    android:textSize="10dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <!-- 微博点赞数 -->
+
+                <ImageButton
+                    android:id="@+id/txt_wb_item_unlike_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="#00000000"
+                    android:clickable="false"
+                    android:src="@drawable/dianzan"/>
+
+                <TextView
+                    android:id="@+id/txt_wb_item_unlike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@id/txt_wb_item_unlike_img"
+                    android:text="1000"
+                    android:textColor="#9ba0aa"
+                    android:textSize="10dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

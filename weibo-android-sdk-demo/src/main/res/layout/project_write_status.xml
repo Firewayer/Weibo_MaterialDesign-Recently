@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_weight="8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="#ffffff">
+        
+        
+        <EditText 
+        android:id="@+id/id_edit_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:maxLength="140"
+        android:hint="分享新鲜事"
+        
+        
+        
+        />
+        
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#ffffff" />
+    
+    <TextView 
+        android:id="@+id/id_txt_kejian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="所有人可见"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="3dp"
+        android:textColor="#778899"
+        />
+    
+    <Button 
+        android:id="@+id/id_btn_sendstatus"
+        android:text="发送"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:background="#1E90FF"
+        android:textColor="#ffffff"
+        />
+
+</LinearLayout>

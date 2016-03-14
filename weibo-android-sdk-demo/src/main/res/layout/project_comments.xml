@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#ffffff"
+    >
+    
+        <include layout="@layout/project_weibo_item"
+            />
+        
+        <ImageView 
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#0099ff"
+        />
+
+	<ListView 
+	  
+	    android:id="@+id/id_list_comments"
+	    android:layout_marginTop="20dp"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:divider="#778899"
+	    android:dividerHeight="1dp"
+	    android:layout_margin="3dp"
+	    android:layout_weight="1"
+	    ></ListView>
+
+	<LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d8e0e8"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+        
+        <Button
+            android:id="@+id/id_btn_comment_menu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/ic_icon"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:textColor="#ffff"
+            android:textSize="15sp" />
+        
+        <EditText 
+            android:id="@+id/id_edit_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:maxLines="5" />
+        
+        <Button
+            android:id="@+id/id_btn_comment_send"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:background="#0099cc"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="评论"
+            android:textColor="#ffff"
+            android:textSize="15sp" />
+        
+    </LinearLayout>
+</LinearLayout>

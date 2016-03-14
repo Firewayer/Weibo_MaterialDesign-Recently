@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#0099ff"
+        android:orientation="vertical" >
+
+        <!-- 用户信息 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <!-- 微博头像 -->
+
+            <ImageView
+                android:id="@+id/img_perinfo_head"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_icon" />
+            <!-- 用户名称 -->
+
+            <TextView
+                android:id="@+id/txt_perinfo_uname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="17dp"
+                android:layout_toRightOf="@id/img_perinfo_head"
+                android:text="Chaos的猫"
+                android:textColor="#ffffff"
+
+                android:textSize="23dp" />
+            <!-- 性别 -->
+
+            <ImageView
+                android:id="@+id/img_perinfo_item_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="21dp"
+                android:layout_toRightOf="@id/txt_perinfo_uname"
+                android:background="#ffffff"
+                android:src="@drawable/v"
+                android:visibility="visible" />
+            <!-- 关注数 -->
+
+            <TextView
+                android:id="@+id/txt_perinfo_guanzhu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_perinfo_uname"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/img_perinfo_head"
+                android:text="关注 76"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+            <!-- 粉丝数 -->
+
+            <TextView
+                android:id="@+id/txt_perinfo_fens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_perinfo_uname"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/txt_perinfo_guanzhu"
+                android:text="粉丝 92"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+
+            <Button
+                android:id="@+id/id_btn_guanzhu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0099ff"
+                android:text="取消关注"
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+                android:layout_alignBottom="@+id/img_perinfo_item_sex"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <!-- 描述 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_perinfo_describtion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="他很懒，什么描述都没有哦"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#0099ff" >
+
+        <TextView
+            android:id="@+id/id_txt_userstatuses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="微博 275"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CCCCCC" >
+
+        <ListView
+            android:id="@+id/listview_statuses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="#ffffff"
+            android:divider="#CCCCCC"
+            android:dividerHeight="3dp" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>
